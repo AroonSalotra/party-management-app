@@ -1,42 +1,113 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: rgb(65, 65, 80);
+  --clr-secondary: rgb(56, 56, 81);
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+ul {
+  list-style-type: none;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon {
+  font-size: 2.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.heart {
+  color: rgb(149, 25, 25);
 }
 
-.card {
-  padding: 2em;
+.health {
+  font-size: 1.2rem;
 }
 
-.read-the-docs {
-  color: #888;
+.hide {
+  display: none;
+}
+
+.shield {
+  color: gray;
+}
+
+.overlap {
+  display: grid;
+}
+
+.overlap :nth-child(1) {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.overlap :nth-child(2) {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  padding-top: 4px;
+}
+
+.party-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.member {
+  background-color: var(--clr-primary);
+  display: flex;
+  flex-direction: column;
+  width: 12rem;
+}
+
+.member-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: var(--clr-secondary);
+}
+
+.member-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding-top: 5px;
+}
+
+.member-btn {
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  background-color: unset;
+  width: 2rem;
+  margin-left: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.member-btns {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.member-list {
+  display: grid;
+  grid-template-columns: repeat(2, 2rem);
+  justify-content: space-around;
+}
+
+.btn-hp {
+  font-size: 1.5rem;
 }

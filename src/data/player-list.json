@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Player1",
+    "level": 2,
+    "health": 3,
+    "classType": "Rogue",
+    "armor": 13
+  },
+  {
+    "name": "Player2",
+    "level": 1,
+    "health": 6,
+    "classType": "Warrior",
+    "armor": 16
+  },
+  {
+    "name": "Player3",
+    "level": 2,
+    "health": 7,
+    "classType": "Wizard",
+    "armor": 8
+  },
+  {
+    "name": "Player4",
+    "level": 4,
+    "health": 21,
+    "classType": "Druid",
+    "armor": 24
+  }
+]
