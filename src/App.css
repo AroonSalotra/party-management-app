@@ -111,3 +111,13 @@ ul {
 .btn-hp {
   font-size: 1.5rem;
 }
+
+.options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.options button {
+  background-color: var(--clr-secondary);
+  width: 32%;
+}

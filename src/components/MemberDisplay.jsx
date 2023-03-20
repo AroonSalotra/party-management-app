@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { AiFillHeart } from "react-icons/ai";
-import { BsFillShieldFill } from "react-icons/bs";
+import { BsFillShieldFill, BsThreeDots } from "react-icons/bs";
+import { FaSkullCrossbones } from "react-icons/fa";
+import { RiZzzFill } from "react-icons/ri";
+import { MdCancel } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const MemberDisplay = ({ name, health, armor, level, classType }) => {
   const [activeHealth, setActiveHealth] = useState("");
@@ -21,7 +25,9 @@ const MemberDisplay = ({ name, health, armor, level, classType }) => {
 
   return (
     <div className="member">
-      <p className="member-name">{name}</p>
+      <Link className="member-name" to={`/character/${name}`}>
+        {name}
+      </Link>
 
       <ul className="member-list">
         <li>{classType}</li>
@@ -48,6 +54,22 @@ const MemberDisplay = ({ name, health, armor, level, classType }) => {
           <span className="member-text">{armor}</span>
         </li>
       </ul>
+
+      <button>
+        <BsThreeDots />
+      </button>
+
+      <div className="options">
+        <button>
+          <FaSkullCrossbones />
+        </button>
+        <button>
+          <RiZzzFill />
+        </button>
+        <button>
+          <MdCancel />
+        </button>
+      </div>
     </div>
   );
 };
