@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AiFillHeart } from "react-icons/ai";
-import { BsFillShieldFill, BsThreeDots } from "react-icons/bs";
+import { BsArrowDownCircleFill, BsThreeDots } from "react-icons/bs";
 import { FaSkullCrossbones } from "react-icons/fa";
 import { RiZzzFill } from "react-icons/ri";
 import { MdCancel } from "react-icons/md";
@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 const MemberDisplay = ({ name, health, armor, level, classType }) => {
   const [activeHealth, setActiveHealth] = useState("");
+  const [showOptions, setShowOptions] = useState(false);
 
   useEffect(() => {
     if (activeHealth != "") return;
@@ -30,14 +31,15 @@ const MemberDisplay = ({ name, health, armor, level, classType }) => {
       </Link>
 
       <ul className="member-list">
-        <li>{classType}</li>
+        <li className="class-type">{classType}</li>
 
-        <li>Lv.{level}</li>
+        <li className="level">Lv.{level}</li>
 
         <li className="overlap">
           <i className="icon heart">
             <AiFillHeart />
           </i>
+
           <div>
             <span className="member-text">{activeHealth}</span>
             <div className="member-btns">
@@ -47,19 +49,19 @@ const MemberDisplay = ({ name, health, armor, level, classType }) => {
           </div>
         </li>
 
-        <li className="overlap">
+        {/* <li className="overlap">
           <i className="icon shield">
             <BsFillShieldFill />
           </i>
           <span className="member-text">{armor}</span>
-        </li>
+        </li> */}
       </ul>
 
-      <button>
+      <button onClick={() => setShowOptions(!showOptions)}>
         <BsThreeDots />
       </button>
 
-      <div className="options">
+      <div className={`options ${showOptions ? "" : "hide"}`}>
         <button>
           <FaSkullCrossbones />
         </button>

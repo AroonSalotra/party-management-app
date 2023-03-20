@@ -23,6 +23,11 @@ ul {
   list-style-type: none;
 }
 
+.hide {
+  opacity: 0;
+  height: 0;
+}
+
 .icon {
   font-size: 2.5rem;
 }
@@ -69,8 +74,11 @@ ul {
   background-color: var(--clr-primary);
   display: flex;
   flex-direction: column;
+  gap: 10px;
   width: 12rem;
+  /* height: 13.5rem; */
 }
+
 
 .member-name {
   font-size: 1.5rem;
@@ -85,27 +93,41 @@ ul {
 }
 
 .member-btn {
-  font-size: 1.3rem;
+  /* font-size: 1.3rem;
   border: none;
   outline: none;
   background-color: unset;
   width: 2rem;
   margin-left: 1.2rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.8rem; */
 }
 
 .member-btns {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 700;
+  margin-top: 10px;
+}
+
+.member-btns button {
+  background-color: var(--clr-secondary);
+  /* height: fit-content; */
+  width: 2rem;
+  border-radius: 20%;
 }
 
 .member-list {
-  display: grid;
-  grid-template-columns: repeat(2, 2rem);
-  justify-content: space-around;
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 3rem); */
+  /* justify-content: space-around; */
+  display: flex;
+  flex-direction: column;
+}
+
+.class-type {
+  font-size: 1.5rem;
 }
 
 .btn-hp {
