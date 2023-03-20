@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PlayerList from "../data/player-list.json";
+import StatDisplay from "../components/StatDisplay";
 
 const Character = () => {
   const routeParams = useParams();
@@ -23,6 +24,9 @@ const Character = () => {
         <>
           <p>Class: {characterData.classType}</p>
           <p>Level: {characterData.level}</p>
+          <div>
+            <StatDisplay characterStats={characterData.stats} />
+          </div>
         </>
       ) : null}
     </div>

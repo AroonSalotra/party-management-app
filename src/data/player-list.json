@@ -4,7 +4,15 @@
     "level": 2,
     "health": 3,
     "classType": "Rogue",
-    "armor": 13
+    "armor": 13,
+    "stats": [
+      { "stat": "strength", "level": 10, "modifier": null },
+      { "stat": "dexerity", "level": 16, "modifier": 3 },
+      { "stat": "constitution", "level": 10, "modifier": null },
+      { "stat": "intelligence", "level": 16, "modifier": 3 },
+      { "stat": "wisdom", "level": 13, "modifier": 1 },
+      { "stat": "charisma", "level": 10, "modifier": null }
+    ]
   },
   {
     "name": "Player2",

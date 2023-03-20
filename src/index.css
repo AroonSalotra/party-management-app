@@ -14,6 +14,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
+ul, li {
+  list-style-type: none;
+}
+
 a {
   /* font-weight: 500;
   color: #646cff;
@@ -48,9 +52,11 @@ button:hover {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
